@@ -488,7 +488,11 @@ p {
   padding-top: 0;
   margin-top: 0;
 }
-
+.page-detail {
+  text-align: center;
+  margin-top: -1.2em;
+  color: #636363;
+}
 .page-nav {
   clear: both;
 }
@@ -541,15 +545,31 @@ main {
 
 /*about*/
 
+/*album pages*/
+.album {
+  text-align: center;
+}
+.album-title {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.album img {
+  display: block;
+  margin: 0 auto 2em auto;
+}
+
+/*gallery pages*/
 
 /*larger screen styles*/
 @media (min-width: 800px) {
+  /*base*/
   a {
     transition: opacity 0.3s;
   }
   a:hover {
     opacity: 0.6;
   }
+  /*about*/
   .about img {
     display: inline-block;
     padding-bottom: 1em;
@@ -561,5 +581,13 @@ main {
   }
   .about .text {
     overflow: hidden;
+  }
+  /*album pages*/
+  .album-list {
+    text-align: center;
+  }
+  .album {
+    display: inline-block;
+    padding: 0 1em;
   }
 }
