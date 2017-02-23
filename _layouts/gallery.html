@@ -1,4 +1,14 @@
 ---
 layout: page
 ---
-{{ content }}
+<p class="page-detail">Click on thumbnail to view gallery</p>
+<div class="gallery-list">
+{% capture imagelocation %}images/{{ page.title | slugify }}{% endcapture %}
+{% for file in site.static_files %}
+  {% if file.path contains imagelocation %}
+      <a href="{{ file.path }}" class="gallery-item" target="_blank">
+          <img src="{{ file.path }}" alt="">
+      </a>
+  {% endif %}
+{% endfor %}
+</div>
