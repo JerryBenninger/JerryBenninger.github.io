@@ -7,7 +7,7 @@ layout: page
   {% for post in site.categories.[categoryslug] %}
   <a href="{{ post.url }}" class="album">
       <h2 class="album-title">{{ post.title }}</h2>
-      {% capture imagelocation %}images/{{ post.title | slugify }}{% endcapture %}
+      {% capture imagelocation %}images/{{ post.slug }}{% endcapture %}
       {% for file in site.static_files %}
         {% if file.path contains imagelocation %}
           <img src="{{ file.path }}" alt="">
