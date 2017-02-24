@@ -3,6 +3,6 @@ layout: default
 ---
 <section class="{{ page.title | slugify }} {{ page.layout }}">
   <a href="/" class="back-link">&LT; BACK</a>
-  <img src="images/headers/{{ page.title | downcase }}.png" alt="{{ page.title }}" class="page-title">
+  <img src="images/headers/{{ page.title | slugify }}.png" alt="{{ page.title }}" class="page-title">
   {{ content }}
 </section>
