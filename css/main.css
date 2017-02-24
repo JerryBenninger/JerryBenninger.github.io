@@ -497,6 +497,7 @@ h1 {
 p {
   padding-top: 0;
   margin-top: 0;
+  margin-bottom: 20px
 }
 .page-detail {
   text-align: center;
@@ -533,6 +534,7 @@ nav ul {
   max-width: 1200px;
   display: block;
   margin: 0 auto;
+  visibility: hidden;
 }
 
 nav li {
@@ -553,14 +555,40 @@ nav a {
 
 /*main*/
 main {
-  max-width: 800px;
+  max-width: 1026px;
   margin: -30px auto 0;
   padding-bottom: 40px;
+  position: relative;
+}
+
+/*page*/
+.back-link {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  font-size: 1.1em;
+}
+.page-title {
+  height: 30px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 /*home*/
+.page-default nav ul {
+  visibility: visible;
+}
+.featured-art {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+}
 
 /*about*/
+.about p {
+  text-indent: 10px;
+  font-style: italic;
+}
 
 /*album pages*/
 .album-list {
@@ -599,14 +627,13 @@ main {
     opacity: 0.6;
   }
   /*about*/
-  .about img {
+  .about .images img {
     display: inline-block;
-    padding-bottom: 1em;
   }
   .about .images {
     float: left;
-    width: 33.333%;
-    margin-right: 2em;
+    width: 330px;
+    margin-right: 20px;
   }
   .about .text {
     overflow: hidden;
