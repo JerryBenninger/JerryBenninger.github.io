@@ -494,6 +494,11 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 p {
   padding-top: 0;
   margin-top: 0;
@@ -501,8 +506,9 @@ p {
 }
 .page-detail {
   text-align: center;
-  margin-top: -1.2em;
+  margin: -5px 0 5px;
   color: #636363;
+  font-size: 18px;
 }
 .page-nav {
   clear: both;
@@ -598,10 +604,6 @@ main {
   font-weight: normal;
   text-transform: uppercase;
 }
-.album img {
-  display: block;
-  margin: 0 auto 2em auto;
-}
 
 /*gallery pages*/
 
@@ -632,11 +634,22 @@ main {
   }
   .about .images {
     float: left;
-    width: 330px;
+    width: 280px;
     margin-right: 20px;
   }
   .about .text {
     overflow: hidden;
+    font-size: 16px;
+  }
+  .about .text p {
+    margin-bottom: 10px;
+  }
+  /*contact*/
+  .contact .page-title {
+    margin-bottom: 100px;
+  }
+  .contact a {
+    padding-left: 40px;
   }
   /*album and gallery pages*/
   .page-gallery header nav {
@@ -646,15 +659,30 @@ main {
   .gallery-list {
     text-align: center;
   }
-  .album,
+  .album-item,
   .gallery-item {
     display: inline-block;
-    padding: 0 1em;
+    width: 300px;
+    padding: 0 50px;
   }
   .gallery-list {
     padding: 1em;
   }
   .gallery-item {
     padding: 1em;
+  }
+  /*storyboard*/
+  .storyboard .album-item {
+    width: 400px;
+  }
+  /*life drawing*/
+  .life-drawing .gallery-list {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+  }
+  .life-drawing .gallery-item {
+    width: 150px;
+    padding: 0px 10px 10px;
   }
 }
