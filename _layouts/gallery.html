@@ -2,6 +2,7 @@
 layout: page
 ---
 <p class="page-detail">Click on thumbnail to view full-size image</p>
+<a href="../" class="back-link">&LT; BACK</a>
 <div class="gallery-list">
 {% capture imagelocation %}images/{{ page.slug }}{% endcapture %}
 {% for file in site.static_files %}
