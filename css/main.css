@@ -580,9 +580,6 @@ main {
 }
 
 /*home*/
-.page-default nav ul {
-  visibility: visible;
-}
 .featured-art {
   max-width: 1000px;
   display: block;
@@ -605,7 +602,7 @@ main {
 }
 
 /*gallery pages*/
-.page-gallery header nav {
+.page-gallery header nav ul {
   visibility: hidden;
 }
 
