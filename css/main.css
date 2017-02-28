@@ -639,12 +639,15 @@ main {
 .lightbox-images {
   height: 100vh;
   width: 100%;
+  padding: 40px 20px;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 .lightbox-images img {
   display: none;
-  margin: 0 auto;
+  margin: 0px auto;
+  max-height: 100%;
 }
 .lightbox-images img:first-of-type {
   display: block;
@@ -653,13 +656,13 @@ main {
   font-size: 1.5em;
   left: 0;
   top: 10px;
+  display: block;
 }
 .big-arrow {
   font-size: 4em;
   color: #fff;
   top: 50%;
-  padding: 30px;
-
+  padding: 20px;
 }
 
 /*larger screen styles*/

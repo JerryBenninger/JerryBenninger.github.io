@@ -1,0 +1,15 @@
+---
+layout: page
+---
+<p class="page-detail">Click on thumbnail to view full-size image</p>
+<a href="../" class="back-link">&LT; BACK</a>
+<div class="gallery-list">
+{% capture imagelocation %}images/{{ page.slug }}/thumbnails{% endcapture %}
+{% for file in site.static_files %}
+  {% if file.path contains imagelocation %}
+      <a href="life-drawing" class="gallery-item">
+          <img src="{{ file.path }}" alt="">
+      </a>
+  {% endif %}
+{% endfor %}
+</div>

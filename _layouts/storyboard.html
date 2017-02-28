@@ -1,0 +1,14 @@
+---
+layout: page
+---
+<p class="page-detail">{{ page.detail }}</p>
+<div class="album-list">
+  {% capture categoryslug %}{{ page.title | slugify }}{% endcapture %}
+  {% for post in site.categories.[categoryslug] %}
+  <a href="/images/{{ post.slug }}/{{ post.slug }}.pdf" class="album-item" target="_blank">
+      <h2 class="album-title">{{ post.title }}</h2>
+      <img src="/images/{{ post.slug }}/{{ post.slug }}.png" alt="">
+      <p>PDF</p>
+  </a>
+  {% endfor %}
+</div>

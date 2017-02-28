@@ -5,7 +5,7 @@ layout: default
   <a href="../" class="back-link">&LT; BACK</a>
   <a href="#" class="big-arrow" onClick="show('prev')">&LT;</a>
   <div class="lightbox-images">
-  {% capture imagelocation %}images/{{ page.slug }}{% endcapture %}
+  {% capture imagelocation %}images/{{ page.slug }}/full-size{% endcapture %}
   {% for file in site.static_files %}
     {% if file.path contains imagelocation %}
       <img src="{{ file.path }}" alt="">
