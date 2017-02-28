@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<section class="lightbox-content">
+  <a href="../" class="back-link">&LT; BACK</a>
+  <a href="#" class="big-arrow" onClick="show('prev')">&LT;</a>
+  <div class="lightbox-images">
+  {% capture imagelocation %}images/{{ page.slug }}{% endcapture %}
+  {% for file in site.static_files %}
+    {% if file.path contains imagelocation %}
+      <img src="{{ file.path }}" alt="">
+    {% endif %}
+  {% endfor %}
+  </div>
+  <a href="#" class="big-arrow" onClick="show('next')">&GT;</a>
+</section>
+<script>
+  var image = document.getElementsByClassName("lightbox-images")[0].getElementsByTagName('img');
+  var length = image.length;
+  var currentNum = 0;
+  function show(action){
+    image[currentNum].style.display = "none";
+    if(action==="prev"){
+      currentNum--;
+    }
+    if(action==="next"){
+      currentNum++;
+    }
+    if(currentNum>=length){
+      currentNum = 0;
+      console.log("hit");
+    }
+    if(currentNum<0){
+      currentNum = image.length;
+    }
+    image[currentNum].style.display="block";
+  }
+</script>

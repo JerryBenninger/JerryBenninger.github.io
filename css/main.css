@@ -510,13 +510,6 @@ p {
   color: #636363;
   font-size: 18px;
 }
-.page-nav {
-  clear: both;
-  text-align: center;
-}
-.page-nav a {
-  text-transform: uppercase;
-}
 
 /*header*/
 header {
@@ -602,7 +595,7 @@ main {
 }
 
 /*gallery pages*/
-.page-gallery header nav ul {
+.gallery header nav ul {
   visibility: hidden;
 }
 
@@ -616,6 +609,57 @@ main {
 }
 .contact-info li {
   padding-bottom: 1em;
+}
+
+/*life drawing*/
+.life-drawing header nav ul {
+  visibility: visible
+}
+
+.life-drawing .back-link {
+  display: none;
+}
+
+/*lightbox*/
+.lightbox {
+  background-color: #000;
+}
+.lightbox header {
+  display: none;
+}
+.lightbox main {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.lightbox-content {
+  display: flex;
+  align-items: center;
+}
+.lightbox-images {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.lightbox-images img {
+  display: none;
+  margin: 0 auto;
+}
+.lightbox-images img:first-of-type {
+  display: block;
+}
+.lightbox .back-link {
+  font-size: 1.5em;
+  left: 0;
+  top: 10px;
+}
+.big-arrow {
+  font-size: 4em;
+  color: #fff;
+  top: 50%;
+  padding: 30px;
+
 }
 
 /*larger screen styles*/
@@ -646,7 +690,7 @@ main {
   .contact .page-title {
     margin-bottom: 100px;
   }
-  .contact a {
+  .contact section a {
     padding-left: 40px;
   }
   /*album and gallery pages*/

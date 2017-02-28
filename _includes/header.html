@@ -7,7 +7,7 @@
     <meta name="description" content="Jerry Benninger's portfolio site.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body class="page-{{ page.layout | slugify }}">
+  <body class="{{ page.title | slugify }} {{ page.layout }}">
     <header>
       <a href="/"><img src="/images/header-logo.png" alt="Jerry Benninger Art and Animation" class="logo"></a>
       <nav>
