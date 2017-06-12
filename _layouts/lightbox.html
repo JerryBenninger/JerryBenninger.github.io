@@ -28,10 +28,9 @@ layout: default
     }
     if(currentNum>=length){
       currentNum = 0;
-      console.log("hit");
     }
-    if(currentNum<0){
-      currentNum = image.length;
+    if(currentNum<=0){
+      currentNum = length-1;
     }
     image[currentNum].style.display="block";
   }
