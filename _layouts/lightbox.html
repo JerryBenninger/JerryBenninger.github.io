@@ -15,23 +15,23 @@ layout: default
   <a href="#" class="big-arrow" onClick="show('next')">&GT;</a>
 </section>
 <script>
-  var image = document.getElementsByClassName("lightbox-images")[0].getElementsByTagName('img');
-  var length = image.length;
+  var images = document.getElementsByClassName("lightbox-images")[0].getElementsByTagName('img');
+  var length = images.length;
   var currentNum = 0;
   function show(action){
-    image[currentNum].style.display = "none";
-    if(action==="prev"){
+    images[currentNum].style.display = "none";
+    if(action === "prev"){
       currentNum--;
     }
-    if(action==="next"){
+    if(action === "next"){
       currentNum++;
     }
-    if(currentNum>=length){
+    if(currentNum > length-1){
       currentNum = 0;
     }
-    if(currentNum<=0){
+    if(currentNum<0){
       currentNum = length-1;
     }
-    image[currentNum].style.display="block";
+    images[currentNum].style.display="block";
   }
 </script>
